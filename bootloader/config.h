@@ -177,7 +177,7 @@
 	#define FASTBOOT 1
 
 #elif defined TARGET_GENERIC_F103_NONE
-
+    #define XTAL16M     1
 
 #elif defined TARGET_GENERIC_F103_PG15
 
