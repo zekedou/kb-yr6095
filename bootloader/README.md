@@ -1,13 +1,25 @@
-# STM32duino-bootloader
+# bootloader
+
+The code is forked from:
+
+- repo: https://github.com/rogerclarkmelbourne/STM32duino-bootloader
+- commit hash: `df689808b6030280480c0d151ee9c552ecf6b405`
+
+The original project aims to provide bootloaders for the STM32F103 boards.
+
+But, this fork only provides bootloader for the MCU on [yr6095](https://github.com/qmk/qmk_firmware/tree/2e3664d2c005a36f06c567aa55702ac950866598/keyboards/yandrstudio/yr6095).
+
+---
+
+> Below is the README of the original project.
 
 Please Note: This code does not work with all STM32F103 Boards
 
 Also Note: Use GCC 4.8 (not 4.9 or newer, as those versions have more aggressive optimisation which cause hardware registers to be read incorrectly and consequently the bootloader does not work)
 
-
 Bootloader for STM32F103 boards, for use with the Arduino_STM32 repo and the Arduino IDE
 
-This repo is a derivation of  https://github.com/jonatanolofsson/maple-bootloader (mini-boot branch) which is in turn a derivation of the maple-bootloader created by Leaflabs http://github.com/leaflabs/maple-bootloader
+This repo is a derivation of https://github.com/jonatanolofsson/maple-bootloader (mini-boot branch) which is in turn a derivation of the maple-bootloader created by Leaflabs http://github.com/leaflabs/maple-bootloader
 
 The bootloader has been reworked so that all versions are contained in the Master branch, rather than 1 branch per version / board.
 
@@ -23,7 +35,6 @@ On "generic" boards, the USB reset (to force re-enumeration by the host), is tri
 This USB reset method was written by @Victor_pv.
 Note: It is not guaranteed to work on all "generic" STM32 boards, and relies on PA12 having a pull-up resistor of around 1.5k - however most "generic" boards seem to have this.
 Its unclear if this method to reset the USB bus conforms precisely to the USB standard, but it seems to work fine on all PCs, Macs and Linux boxes on which it's been tested - and seems usable for hobby / non commericial / non-critical systems.
-
 
 There are multiple build targets for "generic" STM32F103 boards - because each vendor seems to have the "LED" on a different port/pin - and the bootloader flashes the LED to indicate the current operation / state.
 
@@ -86,16 +97,10 @@ The Flash page (and hence DFU upload block size) no longer needs to be defined e
 
 Note the code directly links flash page size to DFU block size. It would probably be possible to decouple this and possibly increase upload speeds, but it has not been done yet.
 
-
 #####Other improvements on the original Maple bootloader
 
 1. Smaller footprint - now only 8k (This became possible due to code changes by @jonatanolofsson which allowed the GCC optimisation for size flag to be used
 2. Additional DFU AltID upload type was added, which allows the sketch to be loaded at 0x8002000 instead of 0x8005000 (due to the reduced size of the bootloader itself),
-Note: Upload to 0x8005000 was retained for backward compatibility.
-
+   Note: Upload to 0x8005000 was retained for backward compatibility.
 
 If you have questions about the bootloader please raise an issue and I will attempt to answer them.
-
-
-
-
