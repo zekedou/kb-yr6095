@@ -27,7 +27,7 @@ Note: The USB on board shouldn't be connected.
 
 <img src="./assets/labeled-pads.jpg" alt="labeled-pads" width="200"/>
 
-> The pads is labeled by [@bartman](https://github.com/bartman)
+> The pads are labeled by [@bartman](https://github.com/bartman)
 
 ## Checking
 
@@ -94,4 +94,4 @@ Then, re-plug the ST-Link and try to flash again.
 ## References
 
 - [ISP Flashing Guide#flashing-stm32duino-bootloader](https://github.com/qmk/qmk_firmware/blob/master/docs/isp_flashing_guide.md#flashing-stm32duino-bootloader) from QMK.
-- [QMK Firmware - Issue 20982](https://github.com/qmk/qmk_firmware/issues/20982)
+- [QMK Firmware - Issue #20982](https://github.com/qmk/qmk_firmware/issues/20982)
