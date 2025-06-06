@@ -5,7 +5,7 @@ This project is:
 - forked from [rogerclarkmelbourne / STM32duino-bootloader](https://github.com/rogerclarkmelbourne/STM32duino-bootloader) (commit hash `df689808b6030280480c0d151ee9c552ecf6b405`)
 - patched with the modifications which come from [STM32duino-bootloader forked by Y&R Studio](https://github.com/Oh-My-Mechanical-Keyboard/kb_bootloaders/tree/main/STM32duino-bootloader).
 
-This project only provides bootloader for the MCU on [yr6095](https://github.com/qmk/qmk_firmware/tree/2e3664d2c005a36f06c567aa55702ac950866598/keyboards/yandrstudio/yr6095).
+This project only provides bootloader for the MCU on YR6095 PCBs.
 
 ## Build
 
